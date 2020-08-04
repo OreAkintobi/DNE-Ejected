@@ -1,0 +1,12 @@
+{
+  "name": "datanow",
+  "displayName": "datanow",
+  "expo": {
+    "name": "datanow",
+    "slug": "datanow",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
