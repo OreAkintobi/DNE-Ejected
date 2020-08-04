@@ -1,0 +1,29 @@
+
+DONE - 1. Sigin requires only email while user should be able to sign in with phone number or email
+DONE - 2. Errors don't show during sign up
+DONE - 3. Errors don't show at the sign-in page
+DONE - 4. We need to format the balance into currency with comma.... I have a function for this in JS which I can send to you. Kindly let me know if you're interested.
+DONE - 5. Notification has not been implemented
+DONE - 6. Theme hasn't been implemented (primary and secondary colour)
+DONE - 8. Buy data needs the network icons implemented
+DONE - 9. Password textbox in data purchase check-out page is showing the password. It's supposed to be a password box
+DONE - 10. Wallet balance is 3,500 instead of the actual wallet balance
+DONE - 11. I can't see the error generated in data purchase checkout page when I try to purchase
+DONE - 12. Airtime purchase page isn't showing discount yet and some currency needs formatting there
+DONE - 13. Contact us page isn't responsive to data from the API (location, about us text, there's also an underline on the phone number in this page)
+DONE - 14. On the payment page, pagination and filters
+DONE - 15. Subscription page, pagination and filters
+DONE - 16. Profile page requests for password on profile edit. It should only do that when a user attempts to change password 
+
+7. Monnify SDK hasn't been implemented on the fund wallet page
+
+Abstract input plus validation to single reusable component (check hairx)
+Check recoil for state management
+Refactor to TypeScript
+Refactor Context files
+Publish app to expo to make it available
+Error handling for device internet connection failure
+Pagination on subscription and payment page
+Filter Modal flickers after backdrop press or dismissal
+Sometimes APIModal does not dismiss after load
+Login navigates to profile screen sometimes after signout then login action
