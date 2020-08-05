@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^10.0.0",
+    "@monnify/react-native-sdk": "^0.1.13",
     "@react-native-community/async-storage": "~1.11.0",
     "@react-native-community/masked-view": "0.1.10",
     "@react-native-community/netinfo": "5.9.2",
