@@ -78,7 +78,11 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-    enableHermes: false
+    enableHermes: false,
+
+    bundleInDebug: true,
+
+    devDisabledInDebug: true
 ]
 
 apply from: '../../node_modules/react-native-unimodules/gradle.groovy'
@@ -206,7 +210,7 @@ dependencies {
     addUnimodulesDependencies()
 
     if (enableHermes) {
-        def hermesPath = "../../node_modules/hermes-engine/android/";
+        def hermesPath = "../../node_modules/hermes-engine/android/"
         debugImplementation files(hermesPath + "hermes-debug.aar")
         releaseImplementation files(hermesPath + "hermes-release.aar")
     } else {
