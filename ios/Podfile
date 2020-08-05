@@ -86,6 +86,8 @@ target 'datanow' do
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable these next few lines.
   add_flipper_pods!
+  pod 'MonnifyReactNativeSdk', :path => '../node_modules/@monnify/react-native-sdk'
+
   post_install do |installer|
     flipper_post_install(installer)
   end

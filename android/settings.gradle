@@ -1,4 +1,6 @@
 rootProject.name = 'datanow'
+include ':@monnify_react-native-sdk'
+project(':@monnify_react-native-sdk').projectDir = new File(rootProject.projectDir, '../node_modules/@monnify/react-native-sdk/android')
 
 apply from: '../node_modules/react-native-unimodules/gradle.groovy'
 includeUnimodulesProjects()
