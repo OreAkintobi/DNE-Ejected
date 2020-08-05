@@ -11,7 +11,7 @@ import { Context as AuthContext } from "../../store/auth-context";
 import { Context as DataContext } from "../../store/data-context";
 import LoadingComponent from "../../components/LoadingComponent";
 import APIModal from "../../components/APIModal";
-// import RNMonnify from "@monnify/react-native-sdk";
+import RNMonnify from "@monnify/react-native-sdk";
 
 import {
   Container,
@@ -67,25 +67,27 @@ const WalletScreen = ({ navigation }) => {
       maximumFractionDigits: 2,
     });
 
-  // const chargeCard = (amount) => {
-  //   RNMonnify.initializePayment({
-  //     amount: amount,
-  //     customerName: `${authState.user.firstname} ${authState.user.lastname}`,
-  //     customerEmail: `${authState.user.email}`,
-  //     // paymentReference: "222",
-  //     paymentDescription: "Fund Wallet",
-  //     currencyCode: "NGN",
-  //     incomeSplitConfig: [],
-  //   })
-  //     .then((response) => {
-  //       console.log(response); // card charged successfully, get reference here
-  //     })
-  //     .catch((error) => {
-  //       console.log(error); // error is a javascript Error object
-  //       console.log(error.message);
-  //       console.log(error.code);
-  //     });
-  // };
+  const chargeCard = (amount) => {
+    RNMonnify.initializePayment({
+      amount: amount,
+      customerName: `${authState.user.firstname} ${authState.user.lastname}`,
+      customerEmail: `${authState.user.email}`,
+      paymentReference: Math.random().toString(20).substr(2, 10),
+      paymentDescription: "Fund Wallet",
+      currencyCode: "NGN",
+      incomeSplitConfig: [],
+    })
+      .then((response) => {
+        console.log(response); // card charged successfully, get reference here
+        fundWallet({ amount: amount });
+        setIsVisible(true);
+      })
+      .catch((error) => {
+        console.log(error); // error is a javascript Error object
+        console.log(error.message);
+        console.log(error.code);
+      });
+  };
 
   return (
     <SafeAreaView>
@@ -110,8 +112,7 @@ const WalletScreen = ({ navigation }) => {
             <Formik
               initialValues={{ amount: 0 }}
               onSubmit={(values) => {
-                fundWallet({ amount: totalFee(values.amount) });
-                setIsVisible(true);
+                chargeCard(totalFee(values.amount));
                 // chargeCard(values.amount)
               }}
               validationSchema={validationSchema}

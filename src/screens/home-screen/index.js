@@ -19,7 +19,7 @@ import UserIconDark from "../../../assets/icons/Small/UserIconDark";
 import CautionIcon from "../../../assets/icons/Small/CautionIcon";
 import ContactIcon from "../../../assets/icons/Small/ContactIcon";
 import APIModal from "../../components/APIModal";
-// import RNMonnify from "@monnify/react-native-sdk";
+import RNMonnify from "@monnify/react-native-sdk";
 
 import {
   Container,
@@ -91,6 +91,13 @@ const HomeScreen = ({ navigation }) => {
   };
 
   useEffect(() => {
+    RNMonnify.initialize({
+      apiKey: "MK_TEST_Y43UX3BPP9",
+      secret: "RFEAYVQLMYQGECQTHANVEPDSJHH4XYQJ",
+      contractCode: "5148698185",
+      applicationMode: "TEST",
+    });
+
     getBusinessData();
     getUserTransactions();
     getUserSubscriptions();
@@ -105,13 +112,6 @@ const HomeScreen = ({ navigation }) => {
     }
 
     return () => clearTimeout(timeOutHandler);
-
-    // RNMonnify.initialize({
-    //   apiKey: "MK_TEST_Y43UX3BPP9",
-    //   secret: "RFEAYVQLMYQGECQTHANVEPDSJHH4XYQJ",
-    //   contractCode: "5148698185",
-    //   applicationMode: "TEST",
-    // });
   }, []);
 
   return (
