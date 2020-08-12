@@ -5,6 +5,7 @@ DONE - 3. Errors don't show at the sign-in page
 DONE - 4. We need to format the balance into currency with comma.... I have a function for this in JS which I can send to you. Kindly let me know if you're interested.
 DONE - 5. Notification has not been implemented
 DONE - 6. Theme hasn't been implemented (primary and secondary colour)
+DONE - 7. Monnify SDK hasn't been implemented on the fund wallet page
 DONE - 8. Buy data needs the network icons implemented
 DONE - 9. Password textbox in data purchase check-out page is showing the password. It's supposed to be a password box
 DONE - 10. Wallet balance is 3,500 instead of the actual wallet balance
@@ -15,7 +16,17 @@ DONE - 14. On the payment page, pagination and filters
 DONE - 15. Subscription page, pagination and filters
 DONE - 16. Profile page requests for password on profile edit. It should only do that when a user attempts to change password 
 
-7. Monnify SDK hasn't been implemented on the fund wallet page
+DONE - 2. The call button at the top right isn't navigating to about us page
+
+1. When you click on back at the ATM payment check-out page, it shows successful for a payment that was never made.
+3. I don't know why 9mobile plans are showing null under buy data plan
+4. Clicking on a data plan name should take them to the data check-out page. It is not necessary that they click either atm price or wallet price. 
+5. Purchase data with wallet gives error..'Given data invalid' I do not know what could be causing this. 
+6. A user logged in should have to enter his email to pay with ATM. The app should fill that for him automatically. 
+7.  ATM payment also gives an unknown error (this could be from the back-end) 
+8. Airtime payment also has problem 5,6,7 
+9. Payments and subscription status are not reflecting their true status.. All are showing pending.
+
 
 Abstract input plus validation to single reusable component (check hairx)
 Check recoil for state management
