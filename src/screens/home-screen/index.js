@@ -68,7 +68,7 @@ const HomeScreen = ({ navigation }) => {
     },
     {
       caption: "pay cable TV",
-      screen: "AboutScreen",
+      screen: null,
       icon: <WalletHistoryIcon background={dataState.theme.secondary} />,
     },
     {
@@ -126,6 +126,7 @@ const HomeScreen = ({ navigation }) => {
           headerRight={() => (
             <ContactIcon backgroundColor={colors.COLOR_WHITE} />
           )}
+          functionPassDown={() => navigation.navigate("AboutScreen")}
         />
         <TopBar
           background={dataState.theme.secondary}
